@@ -1,52 +1,56 @@
-.navigation
+nav
   width: 100%
   font-family: arial
   background-color: $blue
   +clearfix
 
-  .left-nav
-    float: left
-
-  .right-nav
-    float: right
-
   ul
+    padding: 0
     margin: 0
+    +clearfix
 
     li
-      display: inline-block
+      width: 33.3%
       text-align: center
       float: left
-      height: 60px
-      margin: 0
-      background-color: #124385
-      width: 150px
-      &:nth-child(3)
-        margin-right: 150px
 
       a
-        color: black
+        color: white
         text-decoration: none
         line-height: 60px
         padding: 0 15px
+
         &:hover
           text-decoration: underline
+
+
+  .nav-left
+    float: left
+
+  .nav-right
+    float: right
+
+  .nav-left, .nav-right
+    width: 40%
 
 .sub-navigation
   font-family: arial
   margin-bottom: 60px
   text-align: center
   background-color: #E5EBEE
+
   ul
     display: inline-block
     height:  60px
     margin: 0
     padding: 0
+
     li
       float: left
       height: 60px
       width: auto
       margin: 0
+
       a
         color: #133944
         text-decoration: none
@@ -54,3 +58,12 @@
         padding: 0 15px
         &:hover
           text-decoration: underline
+
+// Logo
+
+.logo
+  width: 20%
+  float: left
+  text-align: center
+  position: relative
+  top: 9px
