@@ -1,19 +1,14 @@
-- left_navigation = ['Home', 'Destinations', 'Shop']
-- right_navigation = ['Hotels', 'Flights', 'Contact']
+- core_navigation = ['Home', 'Destinations', 'Shop', 'Hotels', 'Flights', 'Contact']
 - sub_navigation = ['Images', 'Video', 'Games']
-/ seperated into 2 ul's to be more fluid
 
 %nav
   .container
-    %ul.nav-left
-      - left_navigation.each do |item|
-        %li
-          %a{href: '#'}
-            = item
+    .hamburger
+      %span &#57349;
     .logo
       %img{src: "images/logo.png"}
-    %ul.nav-right
-      - right_navigation.each do |item|
+    %ul
+      - core_navigation.each do |item|
         %li
           %a{href: '#'}
             = item

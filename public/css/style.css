@@ -1,7 +1,16 @@
+@font-face {
+  font-family: entypo;
+  font-weight: normal;
+  font-style: normal;
+  src: url("/fonts/entypo.eot");
+  src: url("/fonts/entypo.eot?#iefix") format("embedded-opentype"), url("/fonts/entypo.woff") format("woff"), url("/fonts/entypo.ttf") format("truetype"), url("/fonts/entypo.svg#entypo") format("svg");
+}
+
 nav {
   width: 100%;
   font-family: arial;
   background-color: #124385;
+  padding: 20px;
   *zoom: 1;
 }
 nav:before, nav:after {
@@ -76,11 +85,17 @@ nav .nav-left, nav .nav-right {
 }
 
 .logo {
-  width: 20%;
-  float: left;
-  text-align: center;
+  width: 82px;
+  height: 41px;
   position: relative;
-  top: 9px;
+  margin: auto;
+}
+
+.hamburger span {
+  font-family: "entypo";
+  font-size: 70px;
+  color: white;
+  display: none;
 }
 
 * {
