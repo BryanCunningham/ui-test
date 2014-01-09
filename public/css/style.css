@@ -1,3 +1,75 @@
+.navigation {
+  width: 100%;
+  font-family: arial;
+  background-color: #124385;
+  *zoom: 1;
+}
+.navigation:before, .navigation:after {
+  content: " ";
+  display: table;
+}
+.navigation:after {
+  clear: both;
+}
+.navigation .left-nav {
+  float: left;
+}
+.navigation .right-nav {
+  float: right;
+}
+.navigation ul {
+  margin: 0;
+}
+.navigation ul li {
+  display: inline-block;
+  text-align: center;
+  float: left;
+  height: 60px;
+  margin: 0;
+  background-color: #124385;
+  width: 150px;
+}
+.navigation ul li:nth-child(3) {
+  margin-right: 150px;
+}
+.navigation ul li a {
+  color: black;
+  text-decoration: none;
+  line-height: 60px;
+  padding: 0 15px;
+}
+.navigation ul li a:hover {
+  text-decoration: underline;
+}
+
+.sub-navigation {
+  font-family: arial;
+  margin-bottom: 60px;
+  text-align: center;
+  background-color: #e5ebee;
+}
+.sub-navigation ul {
+  display: inline-block;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+}
+.sub-navigation ul li {
+  float: left;
+  height: 60px;
+  width: auto;
+  margin: 0;
+}
+.sub-navigation ul li a {
+  color: #133944;
+  text-decoration: none;
+  line-height: 60px;
+  padding: 0 15px;
+}
+.sub-navigation ul li a:hover {
+  text-decoration: underline;
+}
+
 body {
   font-family: Georgia;
   padding: 0;
@@ -5,7 +77,8 @@ body {
 }
 
 .container {
-  width: 1000px;
+  max-width: 1000px;
+  width: 96%;
   margin: 0 auto;
 }
 
@@ -72,66 +145,6 @@ h3 {
   height: 150px;
   margin-bottom: 20px;
   overflow: hidden;
-}
-
-.navigation {
-  font-family: arial;
-  text-align: center;
-  background-color: #124385;
-}
-.navigation ul {
-  display: inline-block;
-  height: 60px;
-  margin: 0;
-}
-.navigation ul li {
-  display: inline-block;
-  text-align: left;
-  float: left;
-  height: 60px;
-  margin: 0;
-  background-color: #124385;
-  width: 150px;
-}
-.navigation ul li:nth-child(3) {
-  margin-right: 150px;
-}
-.navigation ul li a {
-  color: white;
-  text-decoration: none;
-  line-height: 60px;
-  padding: 0 15px;
-}
-.navigation ul li a:hover {
-  text-decoration: underline;
-}
-
-.sub-navigation {
-  font-family: arial;
-  margin-bottom: 60px;
-  text-align: center;
-  background-color: #e5ebee;
-}
-.sub-navigation ul {
-  display: inline-block;
-  height: 60px;
-  margin: 0;
-  padding: 0;
-}
-.sub-navigation ul li {
-  float: left;
-  height: 60px;
-  width: auto;
-  margin: 0;
-}
-.sub-navigation ul li a {
-  color: #133944;
-  text-decoration: none;
-  line-height: 60px;
-  padding: 0 15px;
-}
-.sub-navigation ul li a:hover {
-  text-decoration: underline;
 }
 
 .lightbox {

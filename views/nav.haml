@@ -1,10 +1,16 @@
-- core_navigation = ['Home', 'Destinations', 'Shop', 'Hotels', 'Flights', 'Contact']
+- left_navigation = ['Home', 'Destinations', 'Shop']
+-right_navigation = ['Hotels', 'Flights', 'Contact']
 - sub_navigation = ['Images', 'Video', 'Games']
 
-%img.logo{src: "images/logo.png"}
 .navigation
-  %ul
-    - core_navigation.each do |item|
+  %ul.left-nav
+    - left_navigation.each do |item|
+      %li
+        %a{href: '#'}
+          = item
+  %img.logo{src: "images/logo.png"}
+  %ul.right-nav
+    - right_navigation.each do |item|
       %li
         %a{href: '#'}
           = item
