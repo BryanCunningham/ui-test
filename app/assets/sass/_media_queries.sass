@@ -1,0 +1,59 @@
+@media screen and (max-width: 1050px)
+
+
+  nav
+
+    .logo
+      margin: 0 auto 20px
+
+    ul
+      position: relative
+      bottom: 0
+      width: 620px
+      margin: auto
+
+      li
+        margin: 0 60px 0 0
+
+        &:nth-child(3)
+          margin: 0 60px 0 0
+
+
+@media screen and (max-width: 675px)
+
+  nav
+    ul
+      width: 419px
+
+      li
+        margin: 0 20px 0 0
+
+        &:nth-child(3)
+          margin: 0 20px 0 0
+
+@media screen and (max-width: 475px)
+
+  nav
+
+    ul
+      height: 0
+      overflow: hidden
+
+      li
+        float: none
+
+    .hamburger
+
+      span
+        position: absolute
+        display: block
+        cursor: pointer
+
+    .logo
+      +clearfix
+      margin: 0
+      float: left
+
+
+
+

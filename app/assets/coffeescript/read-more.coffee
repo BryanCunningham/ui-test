@@ -6,7 +6,7 @@ $ ->
 
     return {
 
-      open : $('.button').on 'click', ->
+      open : $('button').on 'click', ->
         if $('.read-more-container').height() > 400
           $('.read-more-container').animate(
             height: initialHeight
