@@ -22,7 +22,10 @@ nav:after {
 }
 nav ul {
   padding: 0;
+  height: 18px;
   margin: 0;
+  position: absolute;
+  bottom: 12px;
   *zoom: 1;
 }
 nav ul:before, nav ul:after {
@@ -86,11 +89,18 @@ nav ul li a:hover {
   margin: auto;
 }
 
+.hamburger {
+  position: relative;
+  float: right;
+  bottom: 13px;
+  right: 20px;
+}
 .hamburger span {
   font-family: "entypo";
   font-size: 70px;
   color: white;
   display: none;
+  line-height: 1;
 }
 
 * {
@@ -104,6 +114,7 @@ body {
 }
 
 .container {
+  position: relative;
   max-width: 1000px;
   width: 96%;
   margin: 0 auto;
@@ -230,4 +241,59 @@ footer a {
 }
 footer a:hover {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 1050px) {
+  nav .logo {
+    margin: 0 auto 20px;
+  }
+  nav ul {
+    position: relative;
+    bottom: 0;
+    width: 620px;
+    margin: auto;
+  }
+  nav ul li {
+    margin: 0 60px 0 0;
+  }
+  nav ul li:nth-child(3) {
+    margin: 0 60px 0 0;
+  }
+}
+@media screen and (max-width: 675px) {
+  nav ul {
+    width: 419px;
+  }
+  nav ul li {
+    margin: 0 20px 0 0;
+  }
+  nav ul li:nth-child(3) {
+    margin: 0 20px 0 0;
+  }
+}
+@media screen and (max-width: 475px) {
+  nav ul {
+    height: 0;
+    overflow: hidden;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav .hamburger span {
+    position: absolute;
+    display: block;
+    cursor: pointer;
+  }
+  nav .logo {
+    *zoom: 1;
+    margin: 0;
+    float: left;
+  }
+  nav .logo:before, nav .logo:after {
+    content: " ";
+    display: table;
+  }
+  nav .logo:after {
+    clear: both;
+  }
 }
