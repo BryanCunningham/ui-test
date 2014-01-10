@@ -1,11 +1,24 @@
 (function() {
+  var featureHeight;
+
+  featureHeight = function() {
+    var accumulator;
+
+    accumulator = 0;
+    $('.feature').each(function() {
+      return accumulator += $(this).outerHeight(true);
+    });
+    console.log(accumulator);
+    return accumulator;
+  };
+
   $(function() {
     return window.LP = (function() {
       var initialHeight;
 
       initialHeight = 400;
       return {
-        open: $('button').on('click', function() {
+        open: $('.readmore').on('click', function() {
           if ($('.read-more-container').height() > 400) {
             $('.read-more-container').animate({
               height: initialHeight
@@ -13,7 +26,7 @@
             $(this).text('Read more');
           } else {
             $('.read-more-container').animate({
-              height: 1600
+              height: featureHeight()
             }, 500);
             $(this).text('Read less');
           }

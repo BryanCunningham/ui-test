@@ -1,3 +1,10 @@
+featureHeight = ->
+      accumulator = 0
+      $('.feature').each ->
+        accumulator += $(this).outerHeight(true)
+      console.log accumulator
+      return accumulator
+
 $ ->
 
   window.LP = (->
@@ -6,7 +13,7 @@ $ ->
 
     return {
 
-      open : $('button').on 'click', ->
+      open : $('.readmore').on 'click', ->
         if $('.read-more-container').height() > 400
           $('.read-more-container').animate(
             height: initialHeight
@@ -14,7 +21,7 @@ $ ->
           $(this).text('Read more')
         else
           $('.read-more-container').animate(
-            height: 1600
+            height: featureHeight()
           , 500)
           $(this).text('Read less')
         false
@@ -29,5 +36,4 @@ $ ->
             $('.lightbox').remove()
 
     }
-
   )()
