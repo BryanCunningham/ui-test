@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,900);
 @font-face {
   font-family: entypo;
   font-weight: normal;
@@ -8,7 +9,6 @@
 
 nav {
   width: 100%;
-  font-family: arial;
   background-color: #124385;
   padding: 20px;
   *zoom: 1;
@@ -41,21 +41,13 @@ nav ul li {
   float: left;
 }
 nav ul li:nth-child(3) {
-  margin: 0 400px 0 0;
+  margin: 0 440px 0 0;
 }
 nav ul li:nth-child(6) {
   margin: 0;
 }
-nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-nav ul li a:hover {
-  text-decoration: underline;
-}
 
 .sub-navigation {
-  font-family: arial;
   margin-bottom: 60px;
   text-align: center;
   background-color: #e5ebee;
@@ -70,16 +62,15 @@ nav ul li a:hover {
   float: left;
   height: 60px;
   width: auto;
+  margin: 0 15px 0 0;
+}
+.sub-navigation ul li:last-child {
   margin: 0;
 }
 .sub-navigation ul li a {
   color: #133944;
   text-decoration: none;
   line-height: 60px;
-  padding: 0 15px;
-}
-.sub-navigation ul li a:hover {
-  text-decoration: underline;
 }
 
 .logo {
@@ -108,9 +99,63 @@ nav ul li a:hover {
 }
 
 body {
-  font-family: Georgia;
+  font-family: "lato";
+  color: #133944;
   padding: 0;
   margin: 0;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+button {
+  border-radius: 2px;
+  background-color: #1e344c;
+  padding: 10px;
+  color: white;
+  margin: 15px 0;
+  border: none;
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
+}
+button.readmore {
+  margin: 0 0 30px 0;
+}
+button.readmore a:hover {
+  border: none;
+}
+button.readmore:hover {
+  background: #124385;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: white;
+  padding: 0 0 2px 0;
+  text-decoration: none;
+}
+a:hover {
+  border-bottom: 2px dotted;
+}
+
+img {
+  border-radius: 2px;
 }
 
 .container {
@@ -143,30 +188,12 @@ body {
   line-height: 1.5;
 }
 .read-more-container h2 {
-  font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 0.01em;
 }
-
-ul {
-  list-style: none;
-}
-
-button {
-  background-color: #1e344c;
-  padding: 10px;
-  color: white;
-  margin-top: 10px;
-  text-decoration: none;
-}
-
-h1 {
-  font-size: 20px;
-}
-
-h3 {
-  font-size: 14px;
-  color: #133944;
+.read-more-container article {
+  padding: 0 0 5px 0;
+  border-bottom: 1px dotted;
 }
 
 .images-container {
