@@ -1,4 +1,4 @@
-$(document).ready ->
+$ ->
 
   featureHeight = ($elements) ->
     accumulator = 0
@@ -13,12 +13,16 @@ $(document).ready ->
       h += $(this).outerHeight(true)
     return h
 
-  $('.read-more-container').css('height', initialHeight())
+  setTimeout (->
+    $('.read-more-container').css('height', initialHeight())
+  ), 100
+# hack: I have an issue with the javascript running before dom is ready.
+# timeout ensures container is in the dom prior to firing
   $(document).on 'click', '.readmore', ->
   # handlers don't attach on page load
     $readMoreContainer = $('.read-more-container')
     # cached selector. Only crawls DOM once to find matching nodes.
-    if $readMoreContainer.height() > initialHeight()
+    if $readMoreContainer.outerHeight() > initialHeight()
       $readMoreContainer.animate(
         height: initialHeight()
       , 500)

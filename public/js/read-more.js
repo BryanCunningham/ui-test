@@ -1,5 +1,5 @@
 (function() {
-  $(document).ready(function() {
+  $(function() {
     var featureHeight, initialHeight;
 
     featureHeight = function($elements) {
@@ -21,12 +21,14 @@
       });
       return h;
     };
-    $('.read-more-container').css('height', initialHeight());
+    setTimeout((function() {
+      return $('.read-more-container').css('height', initialHeight());
+    }), 100);
     $(document).on('click', '.readmore', function() {
       var $readMoreContainer;
 
       $readMoreContainer = $('.read-more-container');
-      if ($readMoreContainer.height() > initialHeight()) {
+      if ($readMoreContainer.outerHeight() > initialHeight()) {
         $readMoreContainer.animate({
           height: initialHeight()
         }, 500);
