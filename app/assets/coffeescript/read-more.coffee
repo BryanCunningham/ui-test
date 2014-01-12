@@ -8,7 +8,7 @@ $ ->
 
   initialHeight = ->
     h = 0
-    height = $('.feature').slice(0,2)
+    height = $('.read-more-container .feature').slice(0,2)
     height.each ->
       h += $(this).outerHeight(true)
     return h
@@ -34,11 +34,20 @@ $ ->
       $(this).text('Read less')
     false
 
+  $(document).on 'click', '.hamburger', ->
+    $navUl = $('nav.header ul')
+    $navUl.toggleClass('open-nav')
+    # To open mobile nav
+
 
   $(document).on 'click', '.js-img', ->
     image = $('<img/>').addClass('lightboxImage').attr('src', $(this).attr('src'))
     lightboxContainer = $('<div/>').addClass('lightbox').append(image)
 
     $('body').append(lightboxContainer).on 'keyup', (e) ->
-      if e.keyCode is 13 or e.keyCode is 27
+      if e.keyCode is 13 || e.keyCode is 27
         $('.lightbox').remove()
+  $(document).on 'click', '.lightbox', ->
+    $('.lightbox').remove()
+# To be able to close lightBox
+

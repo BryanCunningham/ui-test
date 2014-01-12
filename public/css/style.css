@@ -27,6 +27,9 @@ nav ul {
   position: absolute;
   bottom: 12px;
   *zoom: 1;
+  -webkit-transition: height, 0.4s;
+  -moz-transition: height, 0.4s;
+  transition: height, 0.4s;
 }
 nav ul:before, nav ul:after {
   content: " ";
@@ -94,6 +97,10 @@ nav ul li:nth-child(6) {
   line-height: 1;
 }
 
+.open-nav {
+  height: 210px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -157,6 +164,8 @@ a:hover {
 
 img {
   border-radius: 2px;
+  width: 100%;
+  height: auto;
 }
 
 .container {
@@ -189,28 +198,23 @@ img {
   border-bottom: 1px dotted;
 }
 
-.images-container {
-  margin-top: 50px;
-  overflow: hidden;
-}
-
-.first-image, .second-image, .third-image {
+.feature-image {
   float: left;
+  margin: 0 5% 30px 0;
   width: 30%;
-  margin-right: 5%;
 }
-.first-image img, .second-image img, .third-image img {
-  max-width: 100%;
-}
-
-.third-image {
-  margin-right: 0;
+.feature-image:nth-child(3) {
+  margin: 0 0 30px 0;
 }
 
 .image-container {
+  cursor: pointer;
   height: 150px;
-  margin-bottom: 20px;
   overflow: hidden;
+  margin-bottom: 20px;
+}
+.image-container img {
+  min-height: 100%;
 }
 
 .lightbox {
@@ -221,11 +225,22 @@ img {
   right: 0;
   bottom: 0;
 }
+.lightbox span {
+  font-family: "entypo";
+  font-size: 42px;
+  position: absolute;
+  left: 949px;
+  top: 215px;
+  cursor: pointer;
+}
 .lightbox .lightboxImage {
   position: absolute;
-  left: 30%;
-  top: 30%;
+  left: 50%;
+  top: 50%;
+  margin: -25% 0 0 -37.5%;
   border: 10px solid white;
+  width: 75%;
+  height: auto;
 }
 
 footer {
@@ -279,6 +294,18 @@ footer a:hover {
     margin: 0 60px 0 0;
   }
 }
+@media screen and (max-width: 800px) {
+  .feature-image {
+    float: none;
+    width: 100%;
+    margin: 0 0 30px 0;
+  }
+
+  .image-container {
+    width: 60%;
+    margin: 0 auto 20px;
+  }
+}
 @media screen and (max-width: 675px) {
   nav ul {
     width: 419px;
@@ -292,11 +319,19 @@ footer a:hover {
 }
 @media screen and (max-width: 475px) {
   nav ul {
-    height: 0;
+    width: 100%;
+    height: 0px;
+    margin: 0;
     overflow: hidden;
+    text-align: center;
   }
   nav ul li {
+    width: 100%;
+    margin: 15px 0 0 0;
     float: none;
+  }
+  nav ul li:nth-child(3), nav ul li:nth-child(6) {
+    margin: 15px 0 0 0;
   }
   nav .hamburger span {
     position: absolute;
@@ -314,5 +349,9 @@ footer a:hover {
   }
   nav .logo:after {
     clear: both;
+  }
+
+  .image-container {
+    width: 100%;
   }
 }

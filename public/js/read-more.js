@@ -15,7 +15,7 @@
       var h, height;
 
       h = 0;
-      height = $('.feature').slice(0, 2);
+      height = $('.read-more-container .feature').slice(0, 2);
       height.each(function() {
         return h += $(this).outerHeight(true);
       });
@@ -41,7 +41,13 @@
       }
       return false;
     });
-    return $(document).on('click', '.js-img', function() {
+    $(document).on('click', '.hamburger', function() {
+      var $navUl;
+
+      $navUl = $('nav.header ul');
+      return $navUl.toggleClass('open-nav');
+    });
+    $(document).on('click', '.js-img', function() {
       var image, lightboxContainer;
 
       image = $('<img/>').addClass('lightboxImage').attr('src', $(this).attr('src'));
@@ -51,6 +57,9 @@
           return $('.lightbox').remove();
         }
       });
+    });
+    return $(document).on('click', '.lightbox', function() {
+      return $('.lightbox').remove();
     });
   });
 
