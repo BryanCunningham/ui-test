@@ -102,7 +102,9 @@ nav ul li:nth-child(6) {
 }
 
 footer nav {
+  border-radius: 2px;
   *zoom: 1;
+  padding: 10px;
   background: white;
   text-align: center;
 }
@@ -116,7 +118,16 @@ footer nav:after {
 footer nav h3 {
   color: #124385;
   margin: 0;
+  padding: 10px 0;
   cursor: pointer;
+  border-radius: 2px;
+  -webkit-transition: all, 0.4s;
+  -moz-transition: all, 0.4s;
+  transition: all, 0.4s;
+}
+footer nav h3:hover {
+  background: #124385;
+  color: white;
 }
 footer nav ul {
   width: 100%;
@@ -127,17 +138,17 @@ footer nav ul {
 footer nav ul li {
   float: none;
   padding: 0;
-  margin: 10px 0 0 0;
+  margin: 15px 0 0 0;
 }
 footer nav ul li:nth-child(3), footer nav ul li:nth-child(6) {
-  margin: 10px 0 0 0;
+  margin: 15px 0 0 0;
 }
 footer nav ul a:hover {
   text-decoration: none;
 }
 
 .footer-open {
-  height: 141px;
+  height: 180px;
 }
 
 * {

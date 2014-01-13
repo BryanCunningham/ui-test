@@ -1,14 +1,23 @@
 footer
 
   nav
+    +border
     +clearfix
+    padding: 10px
     background: white
     text-align: center
 
     h3
       color: $blue
       margin: 0
+      padding: 10px 0
       cursor: pointer
+      +border
+      +transition(all, .4s)
+
+      &:hover
+        background: $blue
+        color: white
 
     ul
       +size(100% 0)
@@ -18,14 +27,14 @@ footer
       li
         float: none
         padding: 0
-        margin: 10px 0 0 0
+        margin: 15px 0 0 0
 
         &:nth-child(3), &:nth-child(6)
-          margin: 10px 0 0 0
+          margin: 15px 0 0 0
 
       a
         &:hover
           text-decoration: none
 
 .footer-open
-  height: 141px
+  height: 180px
