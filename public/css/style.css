@@ -101,6 +101,26 @@ nav ul li:nth-child(6) {
   height: 210px;
 }
 
+footer nav {
+  background: white;
+}
+footer nav h3 {
+  color: #124385;
+}
+footer nav ul {
+  position: static;
+  height: auto;
+}
+footer nav ul li {
+  float: none;
+}
+footer nav ul li:nth-child(3) {
+  margin: 0;
+}
+footer nav ul a:hover {
+  text-decoration: none;
+}
+
 * {
   box-sizing: border-box;
 }
