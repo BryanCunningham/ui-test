@@ -58,8 +58,17 @@
         }
       });
     });
-    return $(document).on('click', '.lightbox', function() {
+    $(document).on('click', '.lightbox', function() {
       return $('.lightbox').remove();
+    });
+    return $(document).on('click', 'footer nav h3', function() {
+      var $footerUL;
+
+      $footerUL = $('footer nav ul');
+      $(this).siblings().toggleClass('footer-open');
+      return $('html, body').animate({
+        scrollTop: $(document).height()
+      }, 400);
     });
   });
 

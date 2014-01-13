@@ -51,3 +51,12 @@ $ ->
     $('.lightbox').remove()
 # To be able to close lightBox
 
+  $(document).on 'click', 'footer nav h3', ->
+    $footerUL = $('footer nav ul')
+    $(this).siblings().toggleClass('footer-open')
+    $('html, body').animate({
+      scrollTop: $(document).height()},
+    400,
+    )
+#open/close footer
+
